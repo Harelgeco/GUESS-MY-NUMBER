@@ -74,6 +74,12 @@ document.querySelector('.check').addEventListener('click', function () {
   // }
 });
 
+// Functionality for the Enter key
+document.querySelector('.guess').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    document.querySelector('.check').click(); // Trigger the click event on the "Check" button
+  }
+});
 // Select the element with the 'again' class and attach a click event handler
 // 2. In the handler function, restore initial values of the 'score' and 'secretNumber' vraiable
 document.querySelector('.again').addEventListener('click', function () {
